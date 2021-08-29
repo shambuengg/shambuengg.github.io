@@ -21,22 +21,29 @@
         </div>
     </div>
     <hr style="color: black;">
-    <div style="display: flex;justify-content: space-around;">
+    <div style="display: flex; justify-content: space-between;">
         <div style="width: 15%;border-style: solid;">
-            <ul><li>Introduction</li></ul>
-            <ul><li>Mahesh</li></ul>
+            <ul><li onclick="getMainPage()">Introduction</li></ul>
+            <ul><li onclick="getIntro()">Mahesh</li></ul>
             <ul><li>Vishnu</li></ul>
             <ul><li>Dnyanu</li></ul>
             <ul><li>Keshav</li></ul>
             <ul><li>Ovi</li></ul>
         </div>
-        <div style="height: 250px; width: 75%;">
-            <p style="display: flex;">
-                Thank you for visiting our website!!!!
-            </p>
-            <p>
-                About us: We do all the PESO related Works for explosive lisence
-            </p>
+        <div style="width: 80%;">
+            <script>
+                function getIntro(){
+                    document.getElementById("intro").innerHTML = "Hello Dear Visitor!</br> We are happy that you've chosen our website to learn programming languages. We're sure you'll become one of the best programmers in your country. Good luck to you!";
+                }
+                function getMainPage(){
+                    document.getElementById("intro").innerHTML = "Thank you for visiting our website!!!!!";
+                }
+            </script>
+            <div style="height: 250px; flex-direction: column;">
+                <p style="display: flex;" id="intro">
+                    Thank you for visiting our website!!!!!
+                </p>
+            </div>
         </div>
     </div>
 </body>
